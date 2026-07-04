@@ -695,9 +695,25 @@
         height: auto;
         min-height: 520px;
         padding: 0;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
-        background-color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        box-shadow: 
+          0 30px 60px rgba(43, 46, 39, 0.3),
+          0 8px 24px rgba(43, 46, 39, 0.15) !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .segmented-control {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+        border: 1px solid rgba(0, 0, 0, 0.03) !important;
+      }
+      .input-field {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        border: 1px solid rgba(90, 97, 81, 0.18) !important;
+      }
+      .input-field:focus {
+        border-color: var(--primary-brand) !important;
+        box-shadow: 0 0 0 4px rgba(90, 97, 81, 0.1) !important;
       }
       .card-side {
         padding: 35px 25px; /* Padding for tablets */
