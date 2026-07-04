@@ -665,11 +665,31 @@
         width: 100%;
         padding: 40px 16px;
         min-height: 100vh;
-        background-color: var(--background-light);
+        background: linear-gradient(135deg, #2b2e27 0%, #3e4237 50%, #5a6151 100%);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+      .mobile-logo {
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3)) invert(1) brightness(1.2);
+      }
+      .logo-circle-mobile {
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+      }
+      .logo-text-mobile {
+        color: #ffffff !important;
+      }
+      .mobile-properties-list .property-item {
+        background: rgba(255, 255, 255, 0.02) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+      }
+      .mobile-properties-list .property-item:hover {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-color: rgba(255, 255, 255, 0.25) !important;
+        color: #ffffff !important;
       }
       .login-card {
         height: auto;
