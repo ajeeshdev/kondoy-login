@@ -605,12 +605,51 @@
         height: auto;
       }
       .split-container {
+        display: flex;
         flex-direction: column;
         height: auto;
         overflow: visible;
       }
       .brand-panel {
-        display: none; /* Hide brand panel on mobile to prioritize form */
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 20px 40px 20px;
+        min-height: auto;
+        background: linear-gradient(135deg, #2b2e27 0%, #3e4237 50%, #5a6151 100%);
+        position: relative;
+      }
+      /* Hide curves and glows on mobile */
+      .brand-curves, .brand-bg-glows {
+        display: none;
+      }
+      /* Hide desktop branding elements on mobile */
+      .brand-logo, .brand-tagline, #logo-fallback-brand {
+        display: none;
+      }
+      /* Compact properties styling */
+      .collection-title {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .brand-properties {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        max-width: 480px;
+        width: 100%;
+      }
+      .property-item {
+        padding: 8px 10px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.8);
       }
       .mobile-logo-container {
         display: flex; /* Show mobile logo */
@@ -619,7 +658,8 @@
         flex-direction: column;
       }
       .form-panel {
-        flex: 1;
+        order: 1;
+        flex: none;
         width: 100%;
         padding: 40px 16px;
         min-height: 100vh;
@@ -644,6 +684,18 @@
     }
 
     @media (max-width: 480px) {
+      .brand-panel {
+        padding: 24px 12px 30px 12px;
+      }
+      .brand-properties {
+        grid-template-columns: 1fr; /* Single column list for extra narrow screens */
+        gap: 6px;
+      }
+      .property-item {
+        padding: 8px 10px;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+      }
       .form-panel {
         min-height: 100vh;
         padding: 30px 12px;
