@@ -554,6 +554,50 @@
       justify-content: center;
     }
 
+    /* Mobile Logo styling */
+    .mobile-logo-container {
+      display: none;
+      margin-bottom: 24px;
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .mobile-logo {
+      max-width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .logo-fallback-wrap-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-circle-mobile {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid var(--primary-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary-brand);
+      margin-bottom: 8px;
+    }
+
+    .logo-text-mobile {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-brand);
+      letter-spacing: 1px;
+    }
+
     /* Responsive Viewports & Mobile Friendliness */
     @media (max-width: 960px) {
       body {
@@ -566,35 +610,24 @@
         overflow: visible;
       }
       .brand-panel {
-        flex: none;
-        height: auto;
-        min-height: 250px;
-        width: 100%;
-        padding: 40px 20px;
+        display: none; /* Hide brand panel on mobile to prioritize form */
       }
-      .brand-logo {
-        max-width: 150px;
+      .mobile-logo-container {
+        display: flex; /* Show mobile logo */
       }
-      .brand-tagline {
-        margin-top: 10px;
-        font-size: 10px;
-        letter-spacing: 3px;
+      .portal-container {
+        flex-direction: column;
       }
-      .brand-properties {
-        margin-top: 25px;
-        max-width: 320px;
-        gap: 8px;
-      }
-      .collection-title {
-        margin-top: 30px;
-      }
-
       .form-panel {
-        flex: none;
+        flex: 1;
         width: 100%;
-        padding: 30px 16px 50px 16px;
-        min-height: calc(100vh - 250px);
+        padding: 40px 16px;
+        min-height: 100vh;
         background-color: var(--background-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       .login-card {
         height: auto;
@@ -611,37 +644,9 @@
     }
 
     @media (max-width: 480px) {
-      .brand-panel {
-        height: auto;
-        min-height: 180px;
-        padding: 30px 15px;
-      }
-      .brand-logo {
-        max-width: 120px;
-      }
-      .brand-tagline {
-        margin-top: 8px;
-        font-size: 9px;
-        letter-spacing: 2px;
-      }
-      .brand-properties {
-        margin-top: 20px;
-        max-width: 280px;
-        gap: 6px;
-      }
-      .property-item {
-        padding: 8px 10px;
-        font-size: 10px;
-        letter-spacing: 1px;
-      }
-      .collection-title {
-        margin-top: 25px;
-        margin-bottom: 10px;
-      }
-
       .form-panel {
-        min-height: calc(100vh - 180px);
-        padding: 20px 12px 40px 12px;
+        min-height: 100vh;
+        padding: 30px 12px;
       }
       .login-card {
         padding: 0;
@@ -711,6 +716,15 @@
     <div class="form-panel">
       <div class="portal-container">
         
+        <!-- Mobile Logo (Visible on mobile viewports only) -->
+        <div class="mobile-logo-container">
+          <img src="./logo.png" alt="KONDODY HOTELS" class="mobile-logo" onerror="this.style.display='none'; document.getElementById('logo-fallback-mobile').style.display='flex';">
+          <div id="logo-fallback-mobile" style="display:none;" class="logo-fallback-wrap-mobile">
+            <div class="logo-circle-mobile">K</div>
+            <span class="logo-text-mobile">KONDODY HOTELS</span>
+          </div>
+        </div>
+
         <div class="login-card" id="portalCard">
           <div class="card-slider" id="cardSlider">
             
