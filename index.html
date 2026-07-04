@@ -270,7 +270,7 @@
     }
 
     .form-header {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     .form-title {
@@ -601,17 +601,37 @@
     /* Mobile Properties list style under logo */
     .mobile-properties-list {
       display: none;
-      font-size: 10px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-      text-align: center;
-      margin-top: 12px;
-      line-height: 1.6;
-      max-width: 340px;
-      margin-left: auto;
-      margin-right: auto;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 16px;
+      max-width: 440px;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .mobile-properties-list .property-item {
+      background: rgba(90, 97, 81, 0.06);
+      border: 1px solid rgba(90, 97, 81, 0.15) !important;
+      color: var(--primary-brand) !important;
+      border-radius: 20px !important;
+      padding: 6px 12px !important;
+      font-size: 9.5px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.5px !important;
+      text-transform: uppercase !important;
+      text-align: center !important;
+      transform: none !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .mobile-properties-list .property-item:hover {
+      background: rgba(90, 97, 81, 0.12);
+      border-color: var(--primary-brand) !important;
+      color: var(--primary-brand-hover) !important;
     }
 
     /* Responsive Viewports & Mobile Friendliness */
@@ -635,7 +655,7 @@
         align-items: center;
       }
       .mobile-properties-list {
-        display: block; /* Show properties list under logo on mobile */
+        display: flex; /* Show properties list under logo on mobile as flex */
       }
       .portal-container {
         flex-direction: column;
@@ -746,14 +766,14 @@
             <span class="logo-text-mobile">KONDODY HOTELS</span>
           </div>
           <div class="mobile-properties-list">
-            <span>Greenwoods Resort</span> &bull; 
-            <span>Amber Dale</span> &bull; 
-            <span>Mystic Mayapott</span> &bull; 
-            <span>Haze & Kites</span> &bull; 
-            <span>Maram Resort</span> &bull; 
-            <span>The Valle</span> &bull; 
-            <span>The Hive</span> &bull; 
-            <span>Mountree</span>
+            <div class="property-item">Greenwoods Resort Thekkady</div>
+            <div class="property-item">Amber Dale Munnar</div>
+            <div class="property-item">Mystic Mayapott Idukki</div>
+            <div class="property-item">Haze & Kites Munnar</div>
+            <div class="property-item">Maram Resort Munnar</div>
+            <div class="property-item">The Valle Munnar</div>
+            <div class="property-item">The Hive Wayanad</div>
+            <div class="property-item">Mountree Munnar</div>
           </div>
         </div>
 
