@@ -570,6 +570,10 @@
       display: block;
     }
 
+    .mobile-tagline {
+      display: none;
+    }
+
     .logo-fallback-wrap-mobile {
       display: flex;
       flex-direction: column;
@@ -653,6 +657,17 @@
         display: flex; /* Show mobile logo container */
         flex-direction: column;
         align-items: center;
+      }
+      .mobile-tagline {
+        display: block;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 12px;
+        text-transform: uppercase;
+        font-family: var(--font-family);
+        text-align: center;
       }
       .mobile-properties-list {
         display: flex; /* Show properties list under logo on mobile as flex */
@@ -773,7 +788,7 @@
           <h1 style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; letter-spacing: 2px;">KONDODY HOTELS</h1>
         </div>
         
-        <!-- <p class="brand-tagline">Experience Luxury. Redefined.</p> -->
+        <p class="brand-tagline">Atithi Devo Bhava</p>
         
         <div class="collection-title">Our Properties</div>
         <div class="brand-properties">
@@ -801,6 +816,7 @@
             <div class="logo-circle-mobile">K</div>
             <span class="logo-text-mobile">KONDODY HOTELS</span>
           </div>
+          <div class="mobile-tagline">Atithi Devo Bhava</div>
           <div class="mobile-properties-list">
             <div class="property-item">Greenwoods Resort Thekkady</div>
             <div class="property-item">Amber Dale Munnar</div>
